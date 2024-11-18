@@ -18,8 +18,8 @@ This tool can automatically add suffix to the version in the `package.json`. The
 {
     "version": "1.2.3",
     "scripts": {
-        "add-suffix": "cross-env SUFFIX=beta node ./node_modules/npm-version-suffix/run-add-suffix.js",
-        "remove-suffix": "cross-env SUFFIX=beta node ./node_modules/npm-version-suffix/run-remove-suffix.js"
+        "foo": "add-suffix",
+        "unfoo": "remove-suffix"
     }
 }
 ```
@@ -27,12 +27,12 @@ This tool can automatically add suffix to the version in the `package.json`. The
 In your CI/CD pipeline, you can run the following script between `build` and `publish`.
 
 ```bash
-npm run add-suffix
+npm run foo
 // or
-yarn add-suffix
+yarn foo
 ```
 
-You probablly don't really need `run-remove-suffix`, but it might be handy sometimes :-)
+You probablly don't really need `remove-suffix`, but it might be handy sometimes :-)
 
 This tool will get the latest beta version of `1.2.3`, e.g. `1.2.3-rc.7` from the npm registry of your package, and then change the version of the current job to `1.2.3-rc.8`, and then the pipeline can continue to publish.
 
@@ -41,7 +41,7 @@ This tool will get the latest beta version of `1.2.3`, e.g. `1.2.3-rc.7` from th
 You can also use this helper in any of your NodeJS project.
 
 ```js
-const { addSuffix, removeSuffix } = require('npm-version-suffix');
+import { addSuffix, removeSuffix } from 'npm-version-suffix';
 
 // by defualt, the suffix is "-rc."
 addSuffix();

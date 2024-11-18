@@ -1,6 +1,6 @@
 {
   "name": "npm-version-suffix",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A tiny helper that automatically add or remove suffix to the version in the `package.json` of your NPM package",
   "keywords": [
     "npm",
@@ -10,23 +10,28 @@
     "Semantic versioning",
     "helper"
   ],
+  "type": "module",
   "main": "index.js",
+  "bin": {
+    "add-suffix": "./bin/run-add-suffix.js",
+    "remove-suffix": "./bin/run-remove-suffix.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iannbing/npm-version-suffix.git"
+    "url": "git+https://github.com/Brent-rb/npm-version-suffix.git"
   },
-  "author": "Huang-Ming Chang <huang.m.chang@gmail.com>",
+  "author": "Brent Berghmans <contact@brentberghmans.be>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iannbing/npm-version-suffix/issues"
+    "url": "https://github.com/Brent-rb/npm-version-suffix/issues"
   },
-  "homepage": "https://github.com/iannbing/npm-version-suffix#readme",
+  "homepage": "https://github.com/Brent-rb/npm-version-suffix#readme",
   "scripts": {
-    "publish:dev": "npm publish --tag beta"
+    "publish:dev": "npm publish"
   },
   "dependencies": {
-    "escape-string-regexp": "^2.0.0",
-    "execa": "^1.0.0",
-    "replace-in-file": "^3.4.4"
+    "escape-string-regexp": "^5.0.0",
+    "execa": "^9.5.1",
+    "replace-in-file": "^8.2.0"
   }
 }
