@@ -13,8 +13,8 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "add-suffix": "./bin/run-add-suffix.js",
-    "remove-suffix": "./bin/run-remove-suffix.js"
+    "add-suffix": "bin/run-add-suffix.js",
+    "remove-suffix": "bin/run-remove-suffix.js"
   },
   "repository": {
     "type": "git",
