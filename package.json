@@ -18,21 +18,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fibricheck/npm-version-suffix.git"
+    "url": "git+https://github.com/fibricheck/npm-version-suffix.git",
+    "baseUrl": "git+https://github.com/fibricheck/npm-version-suffix.git"
   },
-  "author": "FibriCheck <info@fibricheck.be>",
+  "author": "FibriCheck <info@fibricheck.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fibricheck/npm-version-suffix/issues"
   },
   "homepage": "https://github.com/fibricheck/npm-version-suffix#readme",
-  "scripts": {
-    "publish:dev": "npm publish"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "escape-string-regexp": "^5.0.0",
     "execa": "^9.5.1",
     "replace-in-file": "^8.2.0"
-  },
-  "packageManager": "yarn@4.5.3"
+  }
 }
